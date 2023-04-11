@@ -8,6 +8,7 @@ function updateVacancyCount(text, elementId) {
     success: function (result) {
       const count = result['found'];
       $(`#${elementId}`).text(`${count} открытых вакансий на hh.ru`);
+      $(`#${elementId}`).attr("href", `https://hh.ru/search/vacancy?text=${text}`);
     },
   });
 }
